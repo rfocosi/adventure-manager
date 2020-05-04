@@ -1,13 +1,10 @@
 package com.dod.model;
 
-import com.dod.db.sql.CreateDb;
-import com.dod.db.sql.Connect;
-import com.dod.db.sql.resources.DataTest;
 import com.dod.exceptions.NotFoundException;
+import com.dod.model.setup.ConnectSetup;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.sql.SQLException;
@@ -15,15 +12,7 @@ import java.util.UUID;
 
 import static org.junit.Assert.*;
 
-public class CharacterRaceTest {
-
-    private static final Connect connect = Connect.getInstance("jdbc:sqlite::memory:");
-
-    @BeforeClass
-    public static void setUp() throws SQLException {
-        new CreateDb(connect);
-        new DataTest(connect);
-    }
+public class CharacterRaceTest extends ConnectSetup {
 
     @Test
     public void createWithoutUUID() {
