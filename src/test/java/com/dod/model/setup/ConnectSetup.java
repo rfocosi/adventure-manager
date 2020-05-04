@@ -1,7 +1,7 @@
 package com.dod.model.setup;
 
 import com.dod.db.sql.Connect;
-import com.dod.db.sql.CreateDb;
+import com.dod.db.sql.setup.CreateDb;
 import com.dod.db.sql.resources.DataTest;
 import org.junit.BeforeClass;
 

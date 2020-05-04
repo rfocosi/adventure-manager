@@ -1,4 +1,6 @@
-package com.dod.db.sql;
+package com.dod.db.sql.setup;
+
+import com.dod.db.sql.Connect;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
